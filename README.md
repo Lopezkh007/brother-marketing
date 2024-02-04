@@ -1,0 +1,3 @@
+-Asydash Admin Kit Start V1
+-Laravel 8.\*
+-PHP 8.1

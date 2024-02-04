@@ -1,0 +1,32 @@
+i.icon {
+    font-size: 17px;
+}
+.form-label span {
+    color: red;
+    margin: auto 5px;
+}
+
+/* Size */
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+/* Sidebar */
+.navbar-brand-box__start {
+    text-align: left !important;
+}
+.profile-wid-bg-sm {
+    height: 200px !important;
+}
+
+/* Table */
+#table__gridjs--container {
+    position: relative;
+    z-index: 1;
+}
+.table__gridjs--create {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    z-index: 2;
+}
