@@ -10,6 +10,7 @@ use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Blog;
 use App\Models\Banner;
+use App\Models\SiteSetting;
 
 class HomeController extends Controller
 {
@@ -35,6 +36,7 @@ class HomeController extends Controller
                 $products->each(function($query){
                     $query->name = json_decode($query->name);
                     $query->short_des = json_decode($query->short_des);
+                    $query->galleries = json_decode($query->galleries);
                 });
             }else{
                 $products = Product::where([['status',1], ['is_feature',1], ['brand_id', $query->id]])
@@ -42,6 +44,7 @@ class HomeController extends Controller
                 $products->each(function($query){
                     $query->name = json_decode($query->name);
                     $query->short_des = json_decode($query->short_des);
+                    $query->galleries = json_decode($query->galleries);
                 });
             }
             
@@ -57,7 +60,9 @@ class HomeController extends Controller
             $query->title = json_decode($query->title);
             $query->summary = json_decode($query->summary);
         });
-        
+        $contact = SiteSetting::where('type','contact')->first();
+        $content = json_decode($contact->content);
+        $data['contact'] = $content;        
         return view('frontend/home',$data);
     }
 }

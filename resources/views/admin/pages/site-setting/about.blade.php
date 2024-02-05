@@ -165,7 +165,34 @@
                             <input type="file" class="filepond filepond-input-circle-6" id="image6" name="image6" accept="image/*" />
                         </div>
                     </div>
-
+                    <div class="col-md-4">
+                        <ul class="nav nav-pills py-1" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#managerEnglish" role="tab">
+                                    Manager General <small>(English)</small>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#managerKhmer" role="tab">
+                                    Manager General <small>(Khmer)</small>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content mb-3">
+                            <div class="tab-pane active" id="managerEnglish" role="tabpanel">
+                                <input name="content[manager_eng]" type="text" class="form-control" id="highlight_en" 
+                                       placeholder="Enter manager in English" value="{{ $content->manager_eng }}" />
+                            </div>
+                            <div class="tab-pane" id="managerKhmer" role="tabpanel">
+                                <input name="content[manager_kh]" type="text" class="form-control" id="manager_cn" 
+                                       placeholder="Enter manager in Khmer" value="{{ $content->manager_kh }}" />
+                            </div>
+                        </div>
+                        <p class="nav-item">Signature</p>
+                        <div class="w-100">
+                            <input type="file" class="filepond filepond-input-circle-3" id="image3" name="image3" accept="image/*" />
+                        </div>
+                    </div>
                     <div class="col-lg-12">
                         <hr>
                         <div class="hstack gap-2 justify-content-start">

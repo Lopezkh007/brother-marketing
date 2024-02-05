@@ -6,7 +6,7 @@
     <main class="main__content_wrapper">
         
         <!-- Start breadcrumb section -->
-        <section class="breadcrumb__section breadcrumb__bg2">
+        <section class="breadcrumb__section breadcrumb__bg2" style="background-image: url('{{asset('uploads/banners/'.$banners->image)}}')">
             <div class="container">
                 <div class="row row-cols-1">
                     <div class="col">
@@ -116,7 +116,11 @@
                                 </div>
                                 <div class="contact__info--content">
                                     <p class="contact__info--content__desc text-white">
-                                        {{$contact->address}}
+                                        @if (config('app.locale')=='kh')
+                                            {{$contact->address_kh?$contact->address_kh:$contact->address}}
+                                        @else
+                                            {{$contact->address}}
+                                        @endif  
                                     </p> 
                                 </div>
                             </div>

@@ -321,7 +321,7 @@
                                     service in major cities across World.</p>
                                 <ul class="social__share footer__social d-flex">
                                     <li class="social__share--list">
-                                        <a class="social__share--icon__style2" target="_blank" href="https://www.facebook.com">
+                                        <a class="social__share--icon__style2" target="_blank" href="">
                                             <svg width="11" height="17" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7.62891 8.625L8.01172 6.10938H5.57812V4.46875C5.57812 3.75781 5.90625 3.10156 7 3.10156H8.12109V0.941406C8.12109 0.941406 7.10938 0.75 6.15234 0.75C4.15625 0.75 2.84375 1.98047 2.84375 4.16797V6.10938H0.601562V8.625H2.84375V14.75H5.57812V8.625H7.62891Z" fill="currentColor"/>
                                             </svg>

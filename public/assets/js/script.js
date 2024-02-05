@@ -5,7 +5,6 @@ const preLoader = function () {
         preloaderWrapper.classList.add("loaded");
     };
 };
-preLoader();
 var getSiblings = function (elem) {
         const siblings = [];
         let sibling = elem.parentNode.firstChild;

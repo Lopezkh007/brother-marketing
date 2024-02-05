@@ -48,7 +48,7 @@
     <main class="main__content_wrapper">
         
         <!-- Start breadcrumb section -->
-        <section class="breadcrumb__section breadcrumb__bg5">
+        <section class="breadcrumb__section breadcrumb__bg5" style="background-image: url('{{asset('uploads/banners/'.$banners->image)}}')">
             <div class="container">
                 <div class="row row-cols-1">
                     <div class="col">

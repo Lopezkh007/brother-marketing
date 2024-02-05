@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Brand;
 use App\Models\Product;
+use App\Models\Banner;
 
 class ProductOneController extends Controller
 {
@@ -24,6 +25,14 @@ class ProductOneController extends Controller
             $q->name = json_decode($q->name);
             $q->short_des = json_decode($q->short_des);
         });
+        $productNew = Product::where([['status',1],['is_new',1]])
+                    ->orderBy('ordering','asc')->limit(3)->get();
+        $productNew->each(function($q){
+            $q->name = json_decode($q->name);
+        });
+        $data['productNews'] = $productNew;
+        $banner = Banner::where([['status',1],['page','PRODUCTS']])->orderBy('ordering','asc')->first();
+        $data['banners'] = $banner;
         return view('frontend/product',$data);
     }
 }

@@ -65,7 +65,12 @@
                         <i class="ri-hand-coin-line"></i> <span data-key="t-slider">Partner</span>
                     </a>
                 </li>
-               
+               <li class="nav-item">
+                    <a class="nav-link menu-link {{Request::is('admin/service*') ? 'active' : ''}}" 
+                        href="{{route('service.index')}}">
+                        <i class="ri-article-line"></i> <span data-key="t-service">Service</span>
+                    </a>
+                </li>
                 
                 <li class="nav-item">
                     <a class="nav-link menu-link {{Request::is('admin/blogs*') ? 'active' : ''}}" 

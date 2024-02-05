@@ -2351,7 +2351,7 @@ body.overlay__active::before,
 .icon1 {
     width: 54px;
     height: 54px;
-    margin: 30px 0 15px 0;
+    margin: 30px auto 15px auto;
 }
 .title-box {
     display: block;
@@ -2376,7 +2376,7 @@ body.overlay__active::before,
     .icon1 {
         width: 44px;
         height: 44px;
-        margin: 20px 0 10px 0;
+        margin: 20px auto 10px auto;
     }
     .paragraph {
         font-size: 12px;
@@ -2392,7 +2392,7 @@ body.overlay__active::before,
     .icon1 {
         width: 44px;
         height: 44px;
-        margin: 20px 0 10px 0;
+        margin: 20px auto 10px auto;
     }
     .paragraph {
         font-size: 12px;
@@ -7472,24 +7472,7 @@ input.quickview__value--number {
 /* 
     32. Breadcrumb css 
 */
-.breadcrumb__bg1 {
-    background: url("../img/banner/About\ Us.jpg");
-}
-.breadcrumb__bg2 {
-    background: url("../img/banner/Contact\ us.jpg");
-}
-.breadcrumb__bg3 {
-    background: url("../img/banner/Services.jpg");
-}
-.breadcrumb__bg4 {
-    background: url("../img/banner/product.jpg");
-}
-.breadcrumb__bg5 {
-    background: url("../img/banner/product.jpg");
-}
-.breadcrumb__bg6 {
-    background: url("../img/banner/Services.jpg");
-}
+
 .breadcrumb__bg1,
 .breadcrumb__bg2,
 .breadcrumb__bg3,
@@ -7554,6 +7537,26 @@ input.quickview__value--number {
     .breadcrumb__bg5,
     .breadcrumb__bg6 {
         height: 220px;
+    }
+}
+@media only screen and (max-width: 510px) {
+    .breadcrumb__bg1,
+    .breadcrumb__bg2,
+    .breadcrumb__bg3,
+    .breadcrumb__bg4,
+    .breadcrumb__bg5,
+    .breadcrumb__bg6 {
+        height: 190px;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .breadcrumb__bg1,
+    .breadcrumb__bg2,
+    .breadcrumb__bg3,
+    .breadcrumb__bg4,
+    .breadcrumb__bg5,
+    .breadcrumb__bg6 {
+        height: 170px;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -8401,8 +8404,13 @@ input.quickview__value--number {
 .about__author--signature {
     position: absolute;
     top: 50%;
-    left: 105px;
+    left: 150px;
     transform: translatey(-50%);
+}
+@media only screen and (max-width: 575px) {
+    .about__author--signature {
+        left: 60px;
+    }
 }
 
 /*

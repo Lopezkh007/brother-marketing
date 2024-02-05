@@ -26,6 +26,14 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/{type}', [backend\SiteSettingController::class, 'index'])->name('index');
         Route::put('/{type}', [backend\SiteSettingController::class, 'onSave'])->name('onsave');
     });
+    Route::group(['prefix' => 'service', 'as' => 'service.'], function () {
+        Route::get('/', [backend\ServiceController::class, 'index'])->name('index');
+        Route::get('/data-list', [backend\ServiceController::class, 'dataList'])->name('list');
+        Route::get('/form/{id?}', [backend\ServiceController::class, 'form'])->name('form');
+        Route::post('/', [backend\ServiceController::class, 'onCreate'])->name('create');
+        Route::patch('/{id}', [backend\ServiceController::class, 'onUpdate'])->name('update');
+        Route::delete('/{id}', [backend\ServiceController::class, 'onDelete'])->name('delete');
+    });
 
     Route::group(['prefix' => 'partner', 'as' => 'partner.'], function () {
         Route::get('/', [backend\PartnerController::class, 'index'])->name('index');

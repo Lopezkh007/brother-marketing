@@ -56,7 +56,7 @@ class SiteSettingController extends Controller
     }
     private function _contactMapper(Request $body){
         return [
-            "address_en" => $body->content['address_en'],
+            "address" => $body->content['address'],
             "address_kh" => $body->content['address_kh'],
             "telephone1" => $body->content['telephone1'],
             "telephone2" => $body->content['telephone2'],
@@ -74,6 +74,8 @@ class SiteSettingController extends Controller
         return [
             "title_eng" => $body->content['title_eng'],
             "title_kh" => $body->content['title_kh'],
+            "manager_eng" => $body->content['manager_eng'],
+            "manager_kh" => $body->content['manager_kh'],
             "description_eng" => $body->content['description_eng'],
             "description_kh" => $body->content['description_kh'],
             "image" => $body->image ?: "",
