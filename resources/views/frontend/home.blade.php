@@ -42,7 +42,7 @@
                                                 target="{{ $s->redirect_new_tap == 1 ? '_blank' : '_self' }}"
                                             >
                                                 @if (config('app.locale')=='kh')
-                                                    {{$s->label->kh ? $s->label->kh : $s->label->en}}
+                                                    {{($s->label->kh ? $s->label->kh : $s->label->en) ? $s->label->en : 'Shop now'}}
                                                 @else 
                                                     {{$s->label->en ? $s->label->en : 'Shop now'}}
                                                 @endif
